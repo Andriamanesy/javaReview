@@ -1,4 +1,4 @@
-package main.java.com.exercices.util;
+package com.exercices.util;
 /*
 1. Calcul de la moyenne pondérée
 Écrivez un programme qui calcule la moyenne pondérée de trois notes avec leurs coefficients respectifs. Les notes et coefficients doivent être saisies par l'utilisateur.

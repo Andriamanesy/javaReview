@@ -1,4 +1,4 @@
-package main.java.com.exercices.app;
+package com.exercices.app;
 
 public class Main {
     public static void main(String[] args) {
