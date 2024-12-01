@@ -1,20 +1,28 @@
 package com.exercices.util;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class CompteBancaire {
     private int numeroCompte;
     private double solde;
 
-
+    public static final Set<Integer> numeroComptesExistant = new HashSet<Integer>();
     public int getNumeroCompte() {
-        if(numeroCompte==0)
-        {
-            System.out.println("La compte n'existe pas !");
-        }
         return numeroCompte;
     }
 
-    public void setNumeroCompte(int numeroCompte) {
+
+    public CompteBancaire(int numeroCompte, double solde) {
+        if (numeroCompte <= 0){
+            throw new IllegalArgumentException("Numero de compte est invalide");
+        }
+        if (numeroComptesExistant.contains(numeroCompte)){
+            throw new IllegalArgumentException("Numero de compte est existant");
+        }
+        this.solde = solde;
         this.numeroCompte = numeroCompte;
+        numeroComptesExistant.add(numeroCompte);
     }
 
     public void deposer(double v) {
